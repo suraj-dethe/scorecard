@@ -1,0 +1,186 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: beige;
+  padding: 20px;
+  margin: 0;   
+  padding: 0;
+}
+
+/* heading style */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+}
+    
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px orangered;
+
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: gray;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Button Style */
+button {
+  background-color:green;
+  
+  border: none;
+  color: white;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: all ease 0.25s;
+    cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  border-radius: 1px;
+  background-color: lawngreen;
+  outline: 2px solid lawngreen;
+  outline-offset: 1px;
+  
+}
+
+
+/* style is used to add subject btn */
+.addsub{
+  cursor: pointer;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-size: 16px;
+  padding: 7px 10px;
+  margin-bottom: 10px;
+  transition: all ease 0.25s;
+}
+
+/* hover effect used when pointer moves there */
+.addsub:hover{
+  border-radius: 1px;
+  background-color: darkred;
+  outline: 2px solid darkred;
+  outline-offset: 1px;
+}
+
+/* style for submit btn */
+.submit{
+  cursor: pointer;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+
+  font-size: 16px;
+  padding: 7px 10px;
+  margin-bottom: 10px;
+  transition: all ease 0.25s;
+  display: flex;
+  justify-content: center;
+  
+  margin: auto;
+}
+.submit:hover{
+  border-radius: 1px;
+  background-color: darkblue;
+  outline: 2px solid blue;
+  outline-offset: 1px;
+}
+
+/* CSS for Scorecard Page */
+/* CSS for Scorecard Page */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px orange;
+  background-image: url('img.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-origin:border-box;
+
+
+
+ 
+}
+
+h1 {
+  text-align: center;
+  
+  color: #333;
+}
+.h3{
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid black;
+  text-align: left;
+}
+
+th {
+  background-color:lightgreen;
+}
+
+
+
+.previous-button {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.previous-button:hover {
+  border-radius: 1px;
+  background-color: darkblue;
+  outline: 2px solid blue;
+  outline-offset: 1px;}
+

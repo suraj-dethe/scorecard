@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scorecard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Scorecard</h1>
+
+  <!-- Scorecard Table -->
+  <div>
+    <h3 class="h3">Savitribai Phule Pune University</h3>
+    <p><b>College Name:</b></b>Suryadatta Group of Insitiues Pune</p>
+    <p><b>Name:</b><span></span></p>
+    <p><b>RollNumber:</b><span ></span></p>
+ 
+
+  </div>
+    <!-- College Information -->
+   
+      
+      <p><b>Academic Year:</b> 2024-2025</p>
+
+  <table frame="box" border="1px">
+   
+    <thead >
+   
+   
+      <tr>
+        <th>Sr. No.</th>
+        <th>Subject</th>
+        <th>Maximum Marks</th>
+        <th>Marks Obtained</th>
+        <th>Percentage</th>
+        <th>Grade</th>
+       
+      </tr>
+          
+    </thead>
+
+    <tbody>
+      <!-- Table rows will be dynamically added here using JavaScript -->
+    </tbody>
+    
+  </table>
+
+
+
+    
+
+  <!-- Previous Button -->
+  <a href="index.html" class="previous-button">Previous</a>
+</div>
+  
+<script>
+
+  // JavaScript to populate scorecard data
+
+//  from local storage data is fetched using get methos stored in table
+document.addEventListener('DOMContentLoaded', function () {
+    const formData = JSON.parse(localStorage.getItem('formData'))
+
+    if (formData) {
+
+        const subjects = formData.subjects;
+
+        //    inn tbody data is ading
+        const tableBody = document.querySelector('tbody');
+
+        subjects.forEach((subject, index) => {
+            const row = `
+          <tr>
+            <td>${index + 1}</td>
+            <td>${subject.name}</td>
+            <td>${subject.outOf}</td>
+            <td>${subject.obtained}</td>
+            <td>${((subject.obtained / subject.outOf) * 100).toFixed(2)}%</td>
+            <td class="${getGrade((subject.obtained / subject.outOf) * 100)}">${getGrade((subject.obtained / subject.outOf) * 100)}</td>
+           
+          </tr>
+          
+        `;
+            tableBody.innerHTML += row;
+
+        });
+    }
+});
+
+// Function to calculate grade
+function getGrade(percentage) {
+    if (percentage >= 75) {
+        return 'Passed With Distinction';
+    } else if (percentage >= 60) {
+        return 'FirstClass';
+    } else if (percentage >= 40) {
+        return 'Pass';
+    } else {
+        return 'Fail';
+    }
+}
+
+</script>
+
+</body>
+</html>

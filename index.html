@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Information Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+  <!-- Form start -->
+  <form id="studentForm">
+    <!-- heading -->
+    <h2>Student Information Form</h2>
+    <!-- fullname validation is done with html5 attribute pattern in that regular exp is used -->
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" pattern="[A-Za-z ]{2,50}" required title="Use only  Alpahabet"
+      placeholder="Enter Your FullName"><br><br>
+
+    <label for="rollNumber">Roll Number:</label>
+    <input type="text" id="rollNumber" name="rollNumber" pattern="[A-Za-z0-9]{8}[A-Za-z]{1}" required
+      title="(Alphanumeric, only in this format: ABCD1234E)" placeholder="Enter Your RollNumber"><br><br>
+
+    <!-- subject  input validation is done with pattern attribute -->
+
+    <div id="subjectsContainer">
+      <div class="subject-row">
+        <label for="subject1">Subject:</label>
+        <input type="text" class="subject" name="subject[]" pattern="[A-Za-z ]{2,50}" required
+          title="Use only  Alpahabet" placeholder="Enter Subject">
+        <!-- we have select the value using select element -->
+        <label for="outOf">Out of:</label>
+        <select name="outOf[]" class="outOf" required>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+        <label for="marks">Obtained Marks:</label>
+        <input type="text" class="marks" name="marks[]" min="0" required>
+        <!-- remove btn is used to remove the subject -->
+        <button type="button" class="remove-subject">Remove Subject</button>
+      </div>
+    </div>
+
+    <!-- add More Subject btn is used for adding the subject the logic is used in javscipt to add subject dynamically -->
+    <button type="button" id="addSubject" class="addsub">Add More Subject</button><br><br>
+    <!-- after click on submit btn the form is redircted to score .html page along with the data -->
+    <button type="submit" class="submit">Submit</button>
+  </form>
+  <!-- form ends -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
